@@ -1,0 +1,29 @@
+objectClass: simpleSecurityObject
+objectClass: organizationalRole
+cn: admin
+userPassword: password
+description: LDAP administrator
+passwordExpirationTime: 20250310152142Z
+
+dn: cn=All Users,ou=Groups,dc=example,dc=edu
+objectClass: groupofnames
+objectClass: top
+cn: All Users
+member: uid=jsmith,ou=people,dc=example,dc=edu
+
+#Good account
+dn: uid=jsmith,ou=People,dc=example,dc=edu
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: inetUser
+objectClass: passwordObject
+givenName: Joe
+uid: jsmith
+sn: Smith
+cn: John Smith
+mail: jsmith@example.edu
+memberOf: cn=All Users,ou=Groups,dc=example,dc=edu
+userPassword: password
+passwordExpirationTime: 20250310152142Z
