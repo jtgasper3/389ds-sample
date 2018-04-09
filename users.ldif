@@ -9,9 +9,42 @@ dn: cn=All Users,ou=Groups,dc=example,dc=edu
 objectClass: groupofnames
 objectClass: top
 cn: All Users
+member: uid=banderson,ou=people,dc=example,dc=edu
+member: uid=jgasper,ou=people,dc=example,dc=edu
 member: uid=jsmith,ou=people,dc=example,dc=edu
 
-#Good account
+dn: uid=banderson,ou=People,dc=example,dc=edu
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: inetUser
+objectClass: passwordObject
+givenName: Bob
+uid: banderson
+sn: Anderson
+cn: Bob Anderson
+mail: banderson@example.edu
+memberOf: cn=All Users,ou=Groups,dc=example,dc=edu
+userPassword: password
+passwordExpirationTime: 20250310152142Z
+
+dn: uid=jgasper,ou=People,dc=example,dc=edu
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: inetUser
+objectClass: passwordObject
+givenName: John
+uid: jgasper
+sn: Gasper
+cn: John Gasper
+mail: jgasper@example.edu
+memberOf: cn=All Users,ou=Groups,dc=example,dc=edu
+userPassword: password
+passwordExpirationTime: 20250310152142Z
+
 dn: uid=jsmith,ou=People,dc=example,dc=edu
 objectClass: organizationalPerson
 objectClass: person
